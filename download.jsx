@@ -60,7 +60,7 @@ function DownloadApp() {
                 <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>APR 19, 2026</span>
               </div>
               <div className="plat-grid">
-                <PlatformCard mac available os="macOS" icon={<AppleIcon size={20} />} detail="12+ · Universal (Intel + Apple Silicon)" size="4.2 MB" href="https://github.com/abrandonwang/draft-overlay/releases/latest/download/draftiq-0.1.0.dmg" />
+                <PlatformCard mac available os="macOS" icon={<AppleIcon size={20} />} detail="12+ · Universal (Intel + Apple Silicon)" size="4.2 MB" href="https://github.com/abrandonwang/draft-overlay/releases/download/v0.1.0/draftiq-0.1.0.dmg" />
                 <PlatformCard os="Windows" icon={<WindowsIcon size={18} />} detail="10+ · x64 support" size="TBA" disabled />
               </div>
               <div style={{ padding: "14px 22px", borderTop: "1px solid var(--line)", display: "flex", gap: 24, color: "var(--muted)", fontSize: 12, flexWrap: "wrap" }}>
@@ -77,7 +77,7 @@ function DownloadApp() {
                 </div>
                 <pre style={{ margin: 0, padding: 18, background: "#0a0a0a", color: "#e8e8e4", fontFamily: "Geist Mono, monospace", fontSize: 12, lineHeight: 1.6, overflowX: "auto", whiteSpace: "pre" }}>
 {`curl -L -o draftiq-0.1.0.dmg \\
-  https://github.com/abrandonwang/draft-overlay/releases/latest/download/draftiq-0.1.0.dmg
+  https://github.com/abrandonwang/draft-overlay/releases/download/v0.1.0/draftiq-0.1.0.dmg
 hdiutil attach draftiq.dmg
 cp -R /Volumes/Draftiq/Draftiq.app /Applications/`}
                 </pre>

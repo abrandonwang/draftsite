@@ -144,7 +144,7 @@ function Content() {
       <p>Download the latest <code>.dmg</code> from the releases page, drag Draftiq into your Applications folder, and launch it.</p>
       <pre>{`# Or install via the terminal
 curl -L -o ~/Downloads/draftiq-0.1.0.dmg \\
-  https://github.com/abrandonwang/draft-overlay/releases/latest/download/draftiq-0.1.0.dmg
+  https://github.com/abrandonwang/draft-overlay/releases/download/v0.1.0/draftiq-0.1.0.dmg
 hdiutil attach ~/Downloads/draftiq.dmg
 cp -R /Volumes/Draftiq/Draftiq.app /Applications/`}</pre>
       <Callout kind="NOTE">Draftiq is signed and notarized. If Gatekeeper complains, right-click the app and choose <strong>Open</strong> the first time.</Callout>
