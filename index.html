@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Draftiq</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+            integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+            integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+            integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            :root {
+                --bg: #f7f7f5;
+                --surface: #ffffff;
+                --ink: #0a0a0a;
+                --ink-2: #2a2a2a;
+                --muted: #6b6b68;
+                --muted-2: #9a9a95;
+                --line: #e6e6e1;
+                --line-2: #efefea;
+                --pick: #0066cc;
+                --pick-soft: #e8f0fb;
+                --ban: #e5484d;
+                --ban-soft: #fceaea;
+                --accent-warn: #b8860b;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: var(--bg);
+                color: var(--ink);
+                overflow-x: clip;
+            }
+            body {
+                font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+                font-feature-settings: "ss01", "cv11";
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+            .mono {
+                font-family:
+                    "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+            }
+            a {
+                color: inherit;
+            }
+            button {
+                font-family: inherit;
+            }
+            ::selection {
+                background: #0066cc;
+                color: #fff;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1.05fr 1fr;
+                gap: 64px;
+                align-items: center;
+            }
+            .three-col {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .six-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width: 1060px) {
+                .hero-grid {
+                    grid-template-columns: 1fr;
+                    gap: 48px;
+                }
+            }
+            /* three-col borders */
+            .three-col > div {
+                border-right: 1px solid var(--line);
+            }
+            .three-col > div:last-child {
+                border-right: none;
+            }
+
+            /* six-grid borders — 3-col default */
+            .six-grid > div {
+                border-right: 1px solid var(--line);
+                border-bottom: 1px solid var(--line);
+            }
+            .six-grid > div:nth-child(3n) { border-right: none; }
+            .six-grid > div:nth-child(4),
+            .six-grid > div:nth-child(5),
+            .six-grid > div:nth-child(6) { border-bottom: none; }
+
+            @media (max-width: 820px) {
+                .three-col { grid-template-columns: 1fr; }
+                .six-grid { grid-template-columns: repeat(2, 1fr); }
+
+                .three-col > div {
+                    border-right: none !important;
+                    border-bottom: 1px solid var(--line);
+                }
+                .three-col > div:last-child { border-bottom: none; }
+
+                /* six-grid 2-col: reset all, then remove last row & even right borders */
+                .six-grid > div {
+                    border-right: 1px solid var(--line) !important;
+                    border-bottom: 1px solid var(--line) !important;
+                }
+                .six-grid > div:nth-child(2n) { border-right: none !important; }
+                .six-grid > div:nth-child(5),
+                .six-grid > div:nth-child(6) { border-bottom: none !important; }
+            }
+
+            @media (max-width: 560px) {
+                .six-grid { grid-template-columns: 1fr; }
+
+                /* six-grid 1-col: no right borders, bottom on all except last */
+                .six-grid > div {
+                    border-right: none !important;
+                    border-bottom: 1px solid var(--line) !important;
+                }
+                .six-grid > div:last-child { border-bottom: none !important; }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel" src="shared-nav.jsx"></script>
+        <script type="text/babel" src="landing.jsx"></script>
+    </body>
+</html>

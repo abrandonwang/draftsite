@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Documentation | Draftiq</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --bg: #f7f7f5; --surface: #ffffff; --ink: #0a0a0a; --ink-2: #2a2a2a;
+    --muted: #6b6b68; --muted-2: #9a9a95; --line: #e6e6e1; --line-2: #efefea;
+    --pick: #0066cc; --pick-soft: #e8f0fb; --ban: #e5484d; --ban-soft: #fceaea;
+    --accent-warn: #b8860b; --code-bg: #f0f0ec;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); overflow-x: clip; }
+  body { font-family: "Geist", ui-sans-serif, system-ui, sans-serif; font-feature-settings: "ss01", "cv11"; -webkit-font-smoothing: antialiased; }
+  .mono { font-family: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+  a { color: inherit; } button { font-family: inherit; }
+  ::selection { background: #0066cc; color: #fff; }
+
+  .docs-grid { display: grid; grid-template-columns: 240px minmax(0, 1fr) 220px; gap: 56px; max-width: 1280px; margin: 0 auto; padding: 40px 32px 120px; align-items: start; }
+  @media (max-width: 1100px) { .docs-grid { grid-template-columns: 220px minmax(0, 1fr); gap: 40px; } .docs-toc { display: none !important; } }
+  @media (max-width: 760px) { .docs-grid { grid-template-columns: 1fr; gap: 24px; padding: 24px 24px 80px; } .docs-sidenav { position: static !important; border-right: none !important; border-bottom: 1px solid var(--line); padding: 0 0 20px !important; max-height: none !important; } }
+  .docs-sidenav, .docs-toc { position: sticky; top: 74px; max-height: calc(100vh - 90px); overflow-y: auto; }
+  .docs-sidenav { padding-right: 16px; border-right: 1px solid var(--line); }
+
+  .doc h1 { font-size: 40px; font-weight: 600; letter-spacing: -1.2px; margin: 0 0 12px; line-height: 1.1; }
+  .doc .lead { font-size: 17px; color: var(--muted); line-height: 1.55; margin: 0 0 40px; max-width: 640px; }
+  .doc h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.4px; margin: 56px 0 14px; scroll-margin-top: 90px; }
+  .doc h2:first-of-type { margin-top: 40px; }
+  .doc h3 { font-size: 15px; font-weight: 600; margin: 24px 0 8px; scroll-margin-top: 90px; }
+  .doc p { font-size: 14.5px; line-height: 1.65; color: var(--ink-2); margin: 0 0 14px; max-width: 680px; }
+  .doc ul { padding-left: 20px; margin: 0 0 14px; }
+  .doc li { font-size: 14.5px; line-height: 1.65; color: var(--ink-2); margin-bottom: 4px; }
+  .doc code { font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 12.5px; background: var(--code-bg); padding: 1px 5px; border: 1px solid var(--line); }
+  .doc pre { background: #0a0a0a; color: #e8e8e4; padding: 16px 18px; overflow-x: auto; font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 12.5px; line-height: 1.6; margin: 0 0 20px; border: 1px solid var(--ink); white-space: pre; }
+  .doc kbd { font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 11.5px; padding: 1px 6px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 1px 0 var(--line); }
+  .doc a.link { color: var(--pick); text-decoration: none; border-bottom: 1px solid #bcd2ec; }
+  .callout { padding: 14px 16px; border: 1px solid var(--line); background: var(--surface); margin: 8px 0 22px; display: grid; grid-template-columns: 4px 1fr; gap: 14px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="shared-nav.jsx"></script>
+<script type="text/babel" src="docs.jsx"></script>
+</body>
+</html>
