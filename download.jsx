@@ -107,7 +107,7 @@ cp -R /Volumes/Draftiq/Draftiq.app /Applications/`}
             <div style={{ fontSize: 22, fontWeight: 500, letterSpacing: -0.4 }}>Read the installation guide.</div>
           </div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <a href="docs.html#installation" style={primaryBtn}>Go to docs →</a>
+            <a href="/docs#installation" style={primaryBtn}>Go to docs →</a>
           </div>
         </div>
       </section>

@@ -119,7 +119,7 @@ function Breadcrumbs({ current }) {
     <div className="mono" style={{ fontSize: 11, color: "var(--muted-2)", letterSpacing: 0.4, marginBottom: 20 }}>
       <a href="index.html" style={{ color: "var(--muted-2)", textDecoration: "none" }}>HOME</a>
       <span style={{ margin: "0 8px" }}>/</span>
-      <a href="docs.html" style={{ color: "var(--muted-2)", textDecoration: "none" }}>DOCUMENTATION</a>
+      <a href="/docs" style={{ color: "var(--muted-2)", textDecoration: "none" }}>DOCUMENTATION</a>
       <span style={{ margin: "0 8px" }}>/</span>
       <span style={{ color: "var(--ink-2)" }}>{current}</span>
     </div>

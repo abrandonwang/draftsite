@@ -28,8 +28,8 @@ function DraftiqNav({ active }) {
           <span className="mono" style={{ fontSize: 11, color: "var(--muted)", padding: "2px 6px", border: "1px solid var(--line)" }}>v0.0.1</span>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-          <a href="docs.html" style={active === "docs" ? draftiqNavLinkActive : draftiqNavLink}>Documentation</a>
-          <a href="download.html" style={active === "download" ? draftiqNavLinkActive : draftiqNavLink}>Download</a>
+          <a href="/docs" style={active === "docs" ? draftiqNavLinkActive : draftiqNavLink}>Documentation</a>
+          <a href="/download" style={active === "download" ? draftiqNavLinkActive : draftiqNavLink}>Download</a>
           <a href="https://github.com/abrandonwang/draftiq" style={{ ...draftiqNavLink, display: "inline-flex", alignItems: "center", gap: 8 }}>
             <DraftiqGitHubIcon size={14} /> GitHub
           </a>
@@ -57,8 +57,8 @@ function DraftiqFooter() {
             <div className="mono" style={{ fontSize: 10.5, color: "var(--muted-2)", letterSpacing: 0.5, marginBottom: 12 }}>PRODUCT</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <a href="index.html" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Home</a>
-              <a href="docs.html" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Documentation</a>
-              <a href="download.html" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Download</a>
+              <a href="/docs" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Documentation</a>
+              <a href="/download" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Download</a>
             </div>
           </div>
           <div>

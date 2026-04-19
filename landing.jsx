@@ -845,10 +845,10 @@ function DownloadCTA() {
           </p>
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <a href="download.html" style={primaryBtnStyle}>
+          <a href="/download" style={primaryBtnStyle}>
             Go to download page →
           </a>
-          <a href="docs.html" style={secondaryBtnStyle}>
+          <a href="/docs" style={secondaryBtnStyle}>
             Read the docs
           </a>
         </div>
