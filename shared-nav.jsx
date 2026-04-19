@@ -25,12 +25,12 @@ function DraftiqNav({ active }) {
         <a href="index.html" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", color: "var(--ink)" }}>
           <DraftiqLogo />
           <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: -0.2 }}>Draftiq</span>
-          <span className="mono" style={{ fontSize: 11, color: "var(--muted)", padding: "2px 6px", border: "1px solid var(--line)" }}>v0.0.1</span>
+          <span className="mono" style={{ fontSize: 11, color: "var(--muted)", padding: "2px 6px", border: "1px solid var(--line)" }}>v0.1.0</span>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
           <a href="/docs" style={active === "docs" ? draftiqNavLinkActive : draftiqNavLink}>Documentation</a>
           <a href="/download" style={active === "download" ? draftiqNavLinkActive : draftiqNavLink}>Download</a>
-          <a href="https://github.com/abrandonwang/draftiq" style={{ ...draftiqNavLink, display: "inline-flex", alignItems: "center", gap: 8 }}>
+          <a href="https://github.com/abrandonwang/draft-overlay" style={{ ...draftiqNavLink, display: "inline-flex", alignItems: "center", gap: 8 }}>
             <DraftiqGitHubIcon size={14} /> GitHub
           </a>
         </div>
@@ -64,9 +64,9 @@ function DraftiqFooter() {
           <div>
             <div className="mono" style={{ fontSize: 10.5, color: "var(--muted-2)", letterSpacing: 0.5, marginBottom: 12 }}>SOURCE</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <a href="https://github.com/abrandonwang/draftiq" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>GitHub</a>
-              <a href="https://github.com/abrandonwang/draftiq/issues" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Issues</a>
-              <a href="https://github.com/abrandonwang/draftiq/blob/main/LICENSE" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>MIT License</a>
+              <a href="https://github.com/abrandonwang/draft-overlay" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>GitHub</a>
+              <a href="https://github.com/abrandonwang/draft-overlay/issues" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Issues</a>
+              <a href="https://github.com/abrandonwang/draft-overlay/releases" style={{ color: "var(--ink-2)", textDecoration: "none", fontSize: 13 }}>Releases</a>
             </div>
           </div>
         </div>

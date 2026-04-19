@@ -131,7 +131,7 @@ function Content() {
     <div className="doc">
       <Breadcrumbs current="Introduction" />
       <h1>Draftiq Documentation</h1>
-      <p className="lead">Everything you need to install, configure, and get the most out of Draftiq during champion select. These docs track the latest stable release, v0.0.1.</p>
+      <p className="lead">Everything you need to install, configure, and get the most out of Draftiq during champion select. These docs track the latest stable release, v0.1.0.</p>
 
       <h2 id="introduction">Introduction</h2>
       <h3 id="what-is-draftiq">What is Draftiq?</h3>
@@ -143,14 +143,14 @@ function Content() {
       <h3 id="macos-install">macOS</h3>
       <p>Download the latest <code>.dmg</code> from the releases page, drag Draftiq into your Applications folder, and launch it.</p>
       <pre>{`# Or install via the terminal
-curl -L -o ~/Downloads/draftiq.dmg \\
-  https://github.com/abrandonwang/draftiq/releases/latest/download/draftiq.dmg
+curl -L -o ~/Downloads/draftiq-0.1.0.dmg \\
+  https://github.com/abrandonwang/draft-overlay/releases/latest/download/draftiq-0.1.0.dmg
 hdiutil attach ~/Downloads/draftiq.dmg
 cp -R /Volumes/Draftiq/Draftiq.app /Applications/`}</pre>
       <Callout kind="NOTE">Draftiq is signed and notarized. If Gatekeeper complains, right-click the app and choose <strong>Open</strong> the first time.</Callout>
 
       <h3 id="windows-install">Windows</h3>
-      <p>Windows support is coming in v0.2. In the meantime, follow <a className="link" href="https://github.com/abrandonwang/draftiq/issues/4">issue #4</a> for progress.</p>
+      <p>Windows support is coming in v0.2. In the meantime, follow <a className="link" href="https://github.com/abrandonwang/draft-overlay/releases">the releases page</a> for progress.</p>
 
       <h3 id="verifying">Verifying the build</h3>
       <p>Every release ships a SHA256 checksum alongside the binary. Verify before running:</p>
@@ -213,10 +213,10 @@ cp -R /Volumes/Draftiq/Draftiq.app /Applications/`}</pre>
 
       <h2 id="faq">FAQ</h2>
       <p><strong>Is Draftiq against the rules?</strong> Draftiq only reads information the client already exposes to you. It does not automate input, read server data, or modify the client.</p>
-      <p><strong>Does it cost anything?</strong> No. It is free and MIT-licensed.</p>
+      <p><strong>Does it cost anything?</strong> No. It is free and open source.</p>
 
       <h2 id="changelog">Changelog</h2>
-      <p>See <a className="link" href="https://github.com/abrandonwang/draftiq/releases">GitHub Releases</a> for the full history. Latest: <code>v0.0.1</code>, initial public beta.</p>
+      <p>See <a className="link" href="https://github.com/abrandonwang/draft-overlay/releases">GitHub Releases</a> for the full history. Latest: <code>v0.1.0</code>, initial public beta.</p>
     </div>
   );
 }

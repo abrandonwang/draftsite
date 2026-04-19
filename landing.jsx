@@ -155,7 +155,7 @@ function Hero() {
               }}
             >
               <a
-                href="/releases/latest/download/draftiq.dmg"
+                href="https://github.com/abrandonwang/draft-overlay/releases/latest/download/draftiq-0.1.0.dmg"
                 download
                 style={primaryBtnStyle}
               >
@@ -168,7 +168,7 @@ function Hero() {
                 </span>
               </a>
               <a
-                href="https://github.com/abrandonwang/draftiq"
+                href="https://github.com/abrandonwang/draft-overlay"
                 style={secondaryBtnStyle}
               >
                 <DraftiqGitHubIcon size={14} /> View on GitHub
